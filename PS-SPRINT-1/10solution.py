@@ -12,11 +12,13 @@
 #     return gcd
 
 # Optimized solution
-def GCD(a,b):
-    if b == 0:
-        return a
-    else:
-        return GCD(b, a % b)
+def GCD(a, b):
+    while b != 0:  # Continue the loop as long as b is not zero
+        remainder = a % b  # Calculate the remainder when a is divided by b
+        a = b  # Update a to the value of b
+        b = remainder  # Update b to the remainder
+    return a  # When b becomes zero, a is the GCD
+
 
 num1=int(input("Enter first number: "))
 num2=int(input("Enter second number: "))
