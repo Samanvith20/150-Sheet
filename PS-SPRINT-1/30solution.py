@@ -20,6 +20,8 @@ def find_missing_numbers(sequence, n):
     for num in sequence:
         if num not in unique_sequence:
             unique_sequence.append(num)
+            # using set
+            # unique_sequence = list(set(sequence))
     
     # Find missing numbers
     missing_numbers = []
